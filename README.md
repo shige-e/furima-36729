@@ -84,7 +84,7 @@ Things you may want to cover:
 | address            | string    | null: false                   |
 | building           | string    |                               |
 | telephone_number   | integer   | null: false                   |
-
+| order              | references| null: false,foreign_key: true |
 
 ### Association
 
