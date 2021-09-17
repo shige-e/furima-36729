@@ -13,10 +13,9 @@
   <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
   <%# render 'shared/error_messages', model: f.object %>
   <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
-
+<%= render "shared/error_messages", resource: resource %>
   <div class="form-group">
     <div class='form-text-wrap'>
-    <%= render "shared/error_messages", resource: resource %>
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
     </div>
