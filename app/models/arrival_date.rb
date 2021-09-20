@@ -7,5 +7,5 @@ class ArrivalDate < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :articles
-  end
+  has_many :items
+end
