@@ -77,6 +77,37 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('Price must be less than or equal to 9999999')
       end
+
+      it 'category_idのカラムが1だと出品できない' do
+        @item.category_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Category can't be blank")
+      end
+      it 'statusのカラムが1だと出品できない' do
+        @item.status_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Status can't be blank")
+      end
+      it 'delivery_feeのカラムが1だと出品できない' do
+        @item.delivery_fee_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Delivery fee can't be blank")
+      end
+      it 'areaのカラムが0だと出品できない' do
+        @item.area_id = '0'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Area can't be blank")
+      end
+      it 'arrival_dateのカラムが1だと出品できない' do
+        @item.arrival_date_id = '1'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Arrival date can't be blank")
+      end
+      it 'userが紐付いていないと出品できない' do
+        @item.user = nil
+        @item.valid?
+        expect(@item.errors.full_messages).to include("User must exist")
+      end
     end
   end
 end
