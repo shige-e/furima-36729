@@ -3,11 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!, except: [:show, :index]
 
-  def forbid_login_user
-    if @item.order
-      redirect_to root_path
-    end
-  end
+
 
   private
 
