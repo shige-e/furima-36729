@@ -10,6 +10,8 @@ class Item < ApplicationRecord
   has_one_attached :image
   has_one    :order
 
+
+  
   validates :image, presence: true
   PRICE_REGEX = /\A[0-9]+\z/
   validates :price, presence: true,

@@ -83,7 +83,7 @@ Things you may want to cover:
 | city               | string    | null: false                   |
 | address            | string    | null: false                   |
 | building           | string    |                               |
-| telephone_number   | integer   | null: false                   |
+| telephone_number   | string   | null: false                   |
 | order              | references| null: false,foreign_key: true |
 
 ### Association
