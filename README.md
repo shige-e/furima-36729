@@ -40,7 +40,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :orders
-- has_many :products
+- has_many :items
 
 ## items テーブル
 
@@ -66,12 +66,12 @@ Things you may want to cover:
 | Column             | Type      | Options                       |
 | ------------------ | --------- | ----------------------------- |
 | user               | references| null: false,foreign_key: true |
-| product            | references| null: false,foreign_key: true |
+| item            | references| null: false,foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :product
+- belongs_to :item
 - has_one    :information
 
 ## information テーブル
@@ -83,7 +83,7 @@ Things you may want to cover:
 | city               | string    | null: false                   |
 | address            | string    | null: false                   |
 | building           | string    |                               |
-| telephone_number   | integer   | null: false                   |
+| telephone_number   | string   | null: false                   |
 | order              | references| null: false,foreign_key: true |
 
 ### Association
